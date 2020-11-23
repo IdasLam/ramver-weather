@@ -3,7 +3,9 @@
     "description": "Weather module for anax",
     "type": "library",
     "license": "MIT",
-    "require": {},
+    "require": {
+        "anax/anax-cli": "^1.2"
+    },
     "autoload": {
         "psr-4": {
             "idla\\": "src/"
