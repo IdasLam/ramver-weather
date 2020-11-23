@@ -1,5 +1,5 @@
 <?php
-namespace Anax\Weather;
+namespace idla\Weather;
 
 class Weather
 {
@@ -9,11 +9,7 @@ class Weather
 
     public function init(string $lon, string $lat)
     {
-        if ($_SERVER['SERVER_NAME'] == "localhost"  || $_SERVER['SERVER_NAME'] == null) {
-            $url = "http://web/htdocs/weatherAPI";
-        } else {
-            $url = "http://www.student.bth.se/~idla18/dbwebb-kurser/ramverk1/me/redovisa/htdocs/weatherAPI";
-        }
+        $url = "http://www.student.bth.se/~idla18/dbwebb-kurser/ramverk1/me/redovisa/htdocs/weatherAPI";
 
         $data = array("lat" => $lat, "lon" => $lon);
 
@@ -51,8 +47,8 @@ class Weather
                 ];
             }
 
-            return $currentWeek;
         }
+        return $currentWeek ?? null;
     }
 
     public function getHistory()
@@ -92,7 +88,7 @@ class Weather
                 ];
             }
 
-            return $historydays;
         }
+        return $historydays ?? null;
     }
 }
