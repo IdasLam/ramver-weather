@@ -2,7 +2,6 @@ language: php
 
 php:
     - 7.4.0
-    - nightly
 
 before_script:
     - make install
